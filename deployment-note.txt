@@ -1,0 +1,31 @@
+When we plan for deploying the pods and each services and we have own deployment files.
+Then we need to first create deployment file and then services
+
+1. create the voting-app deployment and voting app service 
+    $ kubectl create -f voting-app-deploy.yaml
+    deployment.apps/voting-app-deploy created
+
+    $ kubectl create -f voting-app-service.yaml
+
+2. create the redis deployment and redis service
+    $ kubectl create -f redis-deploy.yaml
+    deployment.apps/redis-deploy created
+    
+    $ kubectl create -f redis-service.yaml
+
+3. create the postgres deployment and postgres service
+    $ kubectl create -f postgres-deploy.yaml
+    deployment.apps/postgres-deploy created
+    
+    $ kubectl create -f postgres-service.yaml
+
+4. create the worker app deployment
+    $ kubectl create -f worker-app-deploy.yaml
+    deployment.apps/worker-app-deploy created
+    
+5. Finally we create the result-app deployment and result app service 
+    $ kubectl create -f result-app-deploy.yaml
+    deployment.apps/result-app-deploy created
+
+    $ kubectl create -f result-app-service.yaml
+
